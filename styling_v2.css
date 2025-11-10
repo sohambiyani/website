@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 150px;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: aliceblue;
+}
+
+/* section {
+    min-height: 75vh;
+} */
+
+a {
+    color:rgb(39, 251, 255);
+    text-decoration: none;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: rgb(38 38 38 / 50%);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+}
+
+nav .navbar {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 100px;
+}
+
+nav .left a {
+    color:aqua;
+    font-size:25px;
+    font-weight:600;
+    margin: 10px 0;
+    transition: 0.2s ease-in-out;
+}
+
+nav .left a:hover {
+    color:aliceblue;
+    
+}
+
+ /* nav .right {
+    background-color: rgba(129, 136, 136, 0.432);
+    padding: 5px 0;
+    padding-top: 8px;
+    border-radius: 12px;
+}  */
+
+nav .right a {
+    display: inline-block;
+    color:aliceblue;
+    outline: none;
+    margin: 0 10px;
+    padding: 4px 3px;
+    transition: color 0.2s, transform 0.2s;
+}
+
+nav .right a:hover {
+    color: aqua;
+    transform: scale(1.3);
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom: 10px;
+}
+
+.about .info {
+    flex: 7;
+    margin-right: 80px;
+}
+
+.about .pic {
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.about .pic img {
+    border-radius: 50%;
+    width: 300px;
+}
+
+.about .info h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    margin-inline: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.75px solid white;
+    border-width: 3px;
+    animation: blink 1s step-end infinite, typing 3s steps(22) forwards;
+}
+
+.about .info .typewriter {
+    display:flex;
+    justify-content: left;
+}
+
+@keyframes typing {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50%{border-color: transparent;}
+}
+
+.about .info .sections {
+    margin-top: 30px;
+}
+
+.about .info .sections a {
+    display: inline-block;
+    padding: 5px  10px;
+    border:rgb(39, 251, 255) 2px solid;
+    border-radius: 6px;
+    margin-right: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.about .info .sections a:hover {
+    color:aliceblue;
+    background-color: rgba(129, 136, 136, 0.432);
+    border:black;
+}
+
+.skillz {
+    padding: 0 50px;
+    margin-bottom: 100px;
+    margin-top: 40px;
+}
+
+.skillz .typewriter, .projectz .typewriter, .hmmm .typewriter, .contact .typewriter {
+    display: flex;
+    justify-content: center;
+}
+
+.skillz h2.animate, .projectz h2.animate, .hmmm h2.animate, .contact h2.animate {
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0;
+    padding-right: 8px;
+    margin-inline: auto;
+    margin-bottom: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.3px solid white;
+    border-width: 2px;
+    animation: blink 1s step-end infinite, typing 2s steps(18) forwards;
+}
+
+.skillz .text, .projectz .intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.projectz .intro {
+    margin-bottom: 50px;
+}
+
+.projectz .cells {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.projectz .cells .cell {
+    width: 300px;
+    padding: 20px 20px;
+    border: 2px solid rgb(39, 251, 255);
+    border-radius: 20px;
+    transition: background-color 0.2s, color 0.2s, border 0.2s;
+}
+
+.projectz .cells .cell.left.animate {
+    animation: slideLeft 1s forwards;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(-100%);
+        filter: blur(5px);
+        opacity: 0;
+    } 
+    to {
+        transform: translateX(0%);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.projectz .cells .cell.right.animate {
+    animation: slideRight 1.5s forwards;
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(100%);
+        filter: blur(5px);
+        opacity: 0;
+    } 
+    to {
+        transform: translateX(0%);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.projectz .cells .cell.middle.animate {
+    animation: fade 2.5s forwards;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    } 
+    to {
+        opacity: 1;
+    }
+}
+.projectz .cells .cell:hover {
+    background-color: aliceblue;
+    color: black;
+    border: 2px solid black;
+    font-weight: 600;
+}
+
+.hmmm {
+    padding: 0 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.hmmm h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.hmmm .slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.hmmm .slider .track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hmmm .slider .btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    padding-top: 3px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.5s, transform 0.5s;
+    outline: none;
+    border: none;
+}
+
+.hmmm .slider .btn:hover {
+    background-color: aqua;
+    transform: scale(1.125);
+}
+
+.hmmm .slider .btn:focus {
+    border: none;
+    outline: none;
+}
+
+.hmmm .circles {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+.hmmm .circles .circle {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+.hmmm .circles .circle.active {
+    background-color: aqua;
+    transform: scale(1.5);
+}
+
+.hmmm .group {
+    display: flex;
+    flex: 0 0 100%;
+    align-items: center;
+    gap:50px;
+    margin-top: 30px;
+    padding-right: 90px;
+}
+
+.hmmm .group .details {
+    text-align: center;
+    flex: 2;
+}
+
+.hmmm .group .testitext {
+    flex:8;
+}
+
+.hmmm .group .details .testicon img {
+    aspect-ratio: 1/1;
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.hmmm .group .details .testicon p {
+    font-weight: 800;
+}
+
+.hmmm .group .details .testicon p:last-child {
+    font-weight: normal;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    border: 5px rgb(39, 251, 255);
+    border-radius: 25px;
+    border-style: double;
+    width: 800px; 
+    margin-bottom: 120px;
+    margin-top: 120px;
+    padding: 50px 0;
+    padding-bottom: 75px;
+}
+
+.contact h2 {
+    margin-top: 20px;
+}
+
+.contact .contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.contact .contact-form .inputs {
+    background-color: lightgrey;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.contact .contact-form .input-button {
+    margin-top: 20px;
+    padding: 20px 30px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 12px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: hsl(0, 0%, 60%);
+}
+
+.contact .contact-form .input-button:hover {
+    background-color: hsl(0, 0%, 70%);
+}
+
+.contact .contact-form .input-button:active {
+    background-color: hsl(0, 0%, 90%);
+}
+
+footer {
+    font-size: 20px;
+    text-align: center;
+    padding: 30px;
+    background-color: rgb(61, 61, 61);
+    color:black;
+    font-weight:bold;
+}
+
